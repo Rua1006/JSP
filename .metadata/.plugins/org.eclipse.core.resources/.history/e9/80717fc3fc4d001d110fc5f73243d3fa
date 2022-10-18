@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="loginForm" action="test05.jsp" method="post">
+		<input type="text" name="id" id="id" placeholder="아이디입력" autofocus>
+		<input type="password" name="pw" id="pw" palceholder="비밀번호입력">
+		<br>
+		<input type="submit" value="로그인">&nbsp;&nbsp;&nbsp;
+		<input type="reset" value="취소">
+	</form>
+</body>
+</html>
