@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test07</title>
+</head>
+<body>
+<%
+	List<String> lst = (List<String>) request.getAttribute("lst");
+	Set<String> set = (Set<String>) request.getAttribute("set");
+	HashMap map = (HashMap) request.getAttribute("map");
+
+	//List의 접근
+	for(int i=0; i<lst.size(); i++){
+		out.println("<li>"+lst.get(i)+"</li>");
+	}
+	
+	out.println("<h2>Set</h2>");
+	Iterator iter = set.iterator();
+	while(iter.hasNext()){
+		out.println("<li>"+iter.next()+"</li>");
+	}
+
+%>
+</body>
+</html>
