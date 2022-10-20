@@ -10,8 +10,6 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <context-param>
-  	<description>전역변수설정</description>
-  	<param-name>userId</param-name>
-  	<param-value>kbs</param-value>
+  <description>전역변수설정</description>
   </context-param>
 </web-app>

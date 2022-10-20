@@ -40,7 +40,7 @@
 	for(String name:val){ //차, 카....
 		out.println("<li>"+name+"</li>");
 	}
-	out.println("");
+	out.println("user id :"+application.getInitParameter("userId"));
 	
 	
 %>
