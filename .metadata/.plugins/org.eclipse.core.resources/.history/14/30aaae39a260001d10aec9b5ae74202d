@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page import ="java.util.*" %>
+<%@ page import ="java.text.*, java.net.InetAddress" %>
+<%@ page import ="com.example.*" %>
+<%@ include file = "common.jsp" %>
+<%
+	String name = "강병수";
+	int age = 300;
+	int num = 70;
+	int num1 = 90, num2=80, num3;
+	Human h1 = new Human();
+	h1.setCountry("KOREA");
+	h1.setName("강병수");
+	
+	
+	List<Human> hList = new ArrayList<Human>();
+	
+	request.setAttribute("hList", hList);
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>04.Expression OR EL</title>
+</head>
+<body>
+
+</body>
+</html>

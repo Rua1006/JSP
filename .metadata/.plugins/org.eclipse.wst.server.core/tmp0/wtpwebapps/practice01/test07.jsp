@@ -41,7 +41,30 @@
 		out.println("<li>"+name+"</li>");
 	}
 	out.println("user id :"+application.getInitParameter("userId"));
+	//InitParameter 전역 변수는 web.xml 또는 application 객체로 한곳에서만 지정 가능
 	
+	
+	//Scope
+	//설정
+	//pageContext - 현재 페이지에서만 유효
+	pageContext.setAttribute("pageData", "페이지컨텍스트");
+	//request - 폼 전송의 목적지 또는 a 요소의 목적지, forward 의 목적지까지 유효
+	request.setAttribute("requestData", "리퀘스트");
+	//application - 웹 브라우저 또는 현재 애플리케이션이 실행되고 있는 동안 유효(전역객체)
+	//전역객체는 web.xml에 등록도 가능함 단, 공통변수로서 초기값만 설정 가능함
+	session.setAttribute("sessionData", "세션");
+	application.setAttribute("applicationData", "어플리케이션");
+	application.setAttribute("msg", "감사합니다.");
+	//application.setInitParameter("memberId", "kbs");
+	
+	//출력
+	out.println("<h3>페이지</h3>"+pageContext.getAttribute("pageData"));
+	out.println("<h3>리퀘스트</h3>"+request.getAttribute("requsetData"));
+	out.println("<h3>세션</h3>"+session.getAttribute("sessionData"));
+	out.println("<h3>어플리케이션</h3>"+application.getAttribute("applicationData"));
+	out.println("<h3>어플리케이션 메시지</h3>"+application.getAttribute("msg"));
+	out.println("msg : "+application.getAttribute("msg"));
+	out.println("<a href='test08.jsp?mgs=테스트08로 갑니다'>테스트08</a>");
 	
 %>
 </body>
